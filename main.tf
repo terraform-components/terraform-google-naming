@@ -1,5 +1,7 @@
 locals {
-  name_format_global   = "${var.context}-${var.environment}-%s"
+  context              = var.context != null ? "${var.context}-" : ""
+  environment          = var.environment != null ? "${var.environment}-" : ""
+  name_format_global   = "${local.context}${local.environment}%s"
   name_format_regional = "${local.name_format_global}-%s"
   name_format_zonal    = "${local.name_format_regional}%s"
 
