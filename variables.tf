@@ -1,11 +1,11 @@
 variable "context" {
   type        = string
-  description = "context"
+  description = "Context of the names. If you don't give one, there will be no context. This depends on your naming strategy."
   default     = null
 }
 
 variable "environment" {
-  description = "name for environment like `dev` `d` `tst` `prd` or whatever naming scheme"
+  description = "Name for the environment."
   type        = string
   default     = null
 }
